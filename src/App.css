@@ -1,0 +1,12 @@
+#homeIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.material-icons.xs-36 { font-size: 36px; }
+
+#rowNavbar{
+    width: 100%;
+}
+

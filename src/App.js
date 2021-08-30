@@ -4,6 +4,7 @@ import HeroListContainer from './components/home_list/HeroListContainer';
 import HeroDetailContainer from './components/detail/HeroDetailContainer';
 import SearchListContainer from './components/search/SearchListContainer';
 import Footer from './components/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
