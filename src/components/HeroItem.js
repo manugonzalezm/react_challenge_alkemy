@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 /* Componente individual para los superhéroes del equipo en el Home y en las búsquedas.
 Dependiendo de las props que este reciba del componente padre se renderizarán o no ciertos elementos: 

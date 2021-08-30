@@ -1,5 +1,11 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Login from './components/Login';
+import NavBar from './components/NavBar';
+import HeroListContainer from './components/home_list/HeroListContainer';
+import HeroDetailContainer from './components/detail/HeroDetailContainer';
+import SearchListContainer from './components/search/SearchListContainer';
+import Footer from './components/Footer';
 import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
