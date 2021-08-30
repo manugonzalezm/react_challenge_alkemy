@@ -5,8 +5,27 @@
 }
 
 .material-icons.xs-36 { font-size: 36px; }
+.material-icons.xs-18 { font-size: 18px; }
+
 
 #rowNavbar{
     width: 100%;
 }
 
+#heroListContainer{
+    margin-top: 100px;
+}
+
+.img_hero{
+    height: 35vh;
+    width: 15vw;
+    margin: 10px auto;
+}
+
+.containerHero{
+    width: 60%;
+    margin: 10px 0 10px 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
