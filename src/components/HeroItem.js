@@ -63,7 +63,7 @@ export default function HeroItem() {
                         Ver más
                     </Button>
                     <Button variant="danger">
-                        <span class="material-icons xs-18">delete</span>
+                        <span className="material-icons xs-18">delete</span>
                     </Button>
                 </div>
             </Card.Body>

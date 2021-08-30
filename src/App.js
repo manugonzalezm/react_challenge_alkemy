@@ -6,10 +6,12 @@ import SearchListContainer from './components/search/SearchListContainer';
 import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import ContextProvider from './context/HeroesContext';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
+    <ContextProvider>
       <BrowserRouter>
         <NavBar />
         <Switch>
@@ -19,6 +21,7 @@ function App() {
         </Switch>
         <Footer />
       </BrowserRouter>
+    </ContextProvider>
   );
 }
 
