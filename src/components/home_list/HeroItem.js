@@ -12,7 +12,7 @@ export default function HeroItem(props) {
             name: p.charAt(0).toUpperCase() + p.slice(1),
             color: colors[names.indexOf(p)],
             value: props.powerstats[p]
-        },)
+        })
     }
 
     return (

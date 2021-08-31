@@ -17,7 +17,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={ HeroListContainer }/>
           <Route exact path='/:id' component={ HeroDetailContainer }/>
-          <Route exact path='/search-:name' component={ SearchListContainer }/>
+          <Route exact path='/search/:name' component={ SearchListContainer }/>
         </Switch>
         <Footer />
       </BrowserRouter>

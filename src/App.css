@@ -5,6 +5,7 @@
 }
 
 .material-icons.xs-36 { font-size: 36px; }
+.material-icons.xs-25 { font-size: 25px; }
 .material-icons.xs-18 { font-size: 18px; }
 
 
@@ -13,7 +14,7 @@
 }
 
 #heroListContainer{
-    margin-top: 100px;
+    margin: 90px auto;
 }
 
 .img_hero{
@@ -37,3 +38,10 @@
     align-items: center;
 }
 
+.searchItem{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
