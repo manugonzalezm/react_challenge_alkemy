@@ -12,6 +12,7 @@ export default function HeroList({ heroes, deleteHero }) {
                     <Col lg={4} className="containerCard my-3">
                         < HeroItem
                             key={item.id}
+                            id={item.id}
                             name={item.name}
                             image={item.image.url}
                             deleteHero={deleteHero}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Button, ProgressBar, Row, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 
 // Componente individual para los superhéroes del equipo en el Home.
 export default function HeroItem(props) {
@@ -35,9 +36,11 @@ export default function HeroItem(props) {
                     </Row>
                 </div>
                 <div className="containerHero">
-                    <Button variant="info">
-                        Ver más
-                    </Button>
+                    <Link to={`/detail/${props.id}`}>
+                        <Button variant="info">
+                            Ver más
+                        </Button>
+                    </Link>
                     <Button variant="danger">
                         <span className="material-icons xs-18">delete</span>
                     </Button>
