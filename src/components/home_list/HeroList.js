@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-import HeroItem from '../HeroItem';
+import HeroItem from './HeroItem';
 
 //Lista de los superhéroes del equipo. 
 //Aquí obtenemos la información recibida de la API via props y la mapeamos con el componente "HeroItem".
