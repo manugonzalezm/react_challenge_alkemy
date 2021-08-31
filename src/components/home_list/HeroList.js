@@ -9,7 +9,7 @@ export default function HeroList({ heroes, deleteHero }) {
     return (
         <Row>
             {heroes.map((item) => (
-                    <Col lg={4}>
+                    <Col lg={4} className="containerCard my-3">
                         < HeroItem
                             key={item.id}
                             name={item.name}
