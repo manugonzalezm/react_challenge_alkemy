@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Card, Col, Row, ProgressBar } from 'react-bootstrap'
+import React from 'react'
+import { Card, Col, Row, ProgressBar, Container } from 'react-bootstrap'
 
 //Este componente mostrará las powerstats totales del equipo asi como tambien la altura y peso promedio.
 export default function PowerstatsTotal({ heroes }) {
@@ -42,41 +42,43 @@ export default function PowerstatsTotal({ heroes }) {
 
     return (
         <Card className="p-2 my-3">
-            <Row>
-                <Col className="my-1" lg={7}>
-                    <Row>
-                        {powerstats.map(item => (
-                            <>
-                                <Col className="my-1" lg={3}>
-                                    {item.name}
-                                </Col>
-                                <Col className="my-1" lg={8}>
-                                    <ProgressBar variant={item.color} now={item.value} />
-                                </Col>
-                            </>
-                        ))}
-                    </Row>
-                </Col>
-                <Col className="my-1" lg={5}>
-                    <Row>
-                        <Col className="my-1" lg={12}>
-                            Altura Promedio: {parseInt(totalHeight/heroes.length)} cm
-                        </Col>
-                        <Col className="my-1" lg={12}>
-                            Peso Promedio: {parseInt(totalWeight/heroes.length)} kg
-                        </Col>
-                        { heroes.length<6 ?
-                            <Col className="my-5" lg={12} id="textHelper">
-                                Todavía podés elegir {6-heroes.length} superhéroes más.
+            <Container>
+                <Row>
+                    <Col className="my-1" lg={7}>
+                        <Row>
+                            {powerstats.map(item => (
+                                <>
+                                    <Col className="my-1" lg={12}>
+                                        {item.name}
+                                    </Col>
+                                    <Col className="my-1" lg={12}>
+                                        <ProgressBar variant={item.color} now={item.value} />
+                                    </Col>
+                                </>
+                            ))}
+                        </Row>
+                    </Col>
+                    <Col className="my-2" lg={5}>
+                        <Row>
+                            <Col className="my-1 large_font" lg={12}>
+                                Altura Promedio: <span className="bold">{parseInt(totalHeight/heroes.length)} cm</span>
                             </Col>
-                            :
-                            <Col className="my-1" lg={12} id="textHelper">
-                                Alcanzaste el máximo de 6 miembros.
+                            <Col className="my-1 large_font" lg={12}>
+                                Peso Promedio: <span className="bold">{parseInt(totalWeight/heroes.length)} kg</span>
                             </Col>
-                        }
-                    </Row>
-                </Col>
-            </Row>
+                            { heroes.length<6 ?
+                                <Col className="my-4" lg={12} id="textHelper">
+                                    Todavía podés elegir {6-heroes.length} superhéroes más.
+                                </Col>
+                                :
+                                <Col className="my-1" lg={12} id="textHelper">
+                                    Alcanzaste el máximo de 6 miembros.
+                                </Col>
+                            }
+                        </Row>
+                    </Col>
+                </Row>
+            </Container>
         </Card>
     )
 }

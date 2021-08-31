@@ -16,7 +16,7 @@ function App() {
         <NavBar />
         <Switch>
           <Route exact path='/' component={ HeroListContainer }/>
-          <Route exact path='/:id' component={ HeroDetailContainer }/>
+          <Route exact path='/detail/:idHero' component={ HeroDetailContainer }/>
           <Route exact path='/search/:name' component={ SearchListContainer }/>
         </Switch>
         <Footer />

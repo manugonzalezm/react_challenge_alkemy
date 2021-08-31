@@ -47,6 +47,32 @@
 }
 
 #textHelper{
-    font-size: large;
+    font-size: 1.3rem;
     font-weight: bold;
+}
+
+#detailContainer{
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#detail{
+    margin: 80px 0;
+}
+
+#imgHeroDetail{
+    width: 100%;
+    height: 60vh;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.large_font{
+    font-size: 1.15rem;
 }
