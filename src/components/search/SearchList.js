@@ -11,6 +11,7 @@ export default function SearchList({ search, addHero }) {
                     <Col key={item.id} lg={4} className="containerCard my-3">
                         < SearchItem
                             key={item.id}
+                            id={item.id}
                             addHero={addHero}
                             name={item.name}
                             image={item.image.url}

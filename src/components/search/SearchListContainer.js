@@ -8,9 +8,8 @@ import Axios from 'axios';
 Aquí ejecutamos la petición a la API para obtener una breve descripción de 
 los superhéroes que coincidan con la búsqueda. */
 export default function SearchListContainer() {
-    const { addHero } = useHeroesContext();
+    const { addHero, search, setSearch } = useHeroesContext();
     const {name} = useParams();
-    const [search, setSearch] = useState([]);
 
     useEffect(()=> {
         Axios({

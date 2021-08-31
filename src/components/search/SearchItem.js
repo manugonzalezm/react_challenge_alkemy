@@ -8,7 +8,7 @@ export default function SearchItem(props) {
             <Card.Body className="searchItem">
                 <Card.Title className="m-0"><h3>{props.name}</h3></Card.Title>
                 <div className="containerHero">
-                    <Button variant="success">
+                    <Button onClick={() => props.addHero(props.id)} variant="success">
                         <span className="material-icons xs-25">add</span>
                     </Button>
                 </div>

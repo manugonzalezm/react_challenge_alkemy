@@ -10,39 +10,52 @@ const evilFromLS = JSON.parse(localStorage.getItem('evil'))
 const ContextProvider = ( {children} ) => {
     const initialStates = [
         heroesFromLS !== ([] || null) ? heroesFromLS : [],
-        goodFromLS !== (0 || null) ? goodFromLS : 0,
-        evilFromLS !== (0 || null) ? evilFromLS : 0,
+        goodFromLS > (0 || null) ? goodFromLS : 0,
+        evilFromLS > (0 || null) ? evilFromLS : 0,
     ]
     const [heroes, setHeroes] = useState(initialStates[0]);
     const [good, setGood] = useState(initialStates[1]);
     const [evil, setEvil] =useState(initialStates[2]);
+    const [search, setSearch] = useState([]);
     
     useEffect(() => {
         localStorage.setItem('heroes', JSON.stringify(heroes))
-    }, [heroes])
+        localStorage.setItem('good', JSON.stringify(good))
+        localStorage.setItem('evil', JSON.stringify(evil))
+    }, [heroes, good, evil])
 
-    const addHero = (hero) => {
+    const addHero = (heroId) => {
         if(heroes.length < 6) {
-            if(hero.biography.alignment === "good" && good<3){
-                setHeroes([...heroes, hero])
-                setGood+=1;
-            } else if(hero.biography.alignment === "evil" && evil<3){
-                setHeroes([...heroes, hero])
-                setEvil+=1;
+            const actualHero = search.find(u => u.id === heroId)
+            console.log(actualHero)
+            //Tomo a los neutrales como buenos para evitar errores.
+            if((actualHero.biography.alignment !== ("bad")) && (good<3)){
+                setHeroes([...heroes, actualHero])
+                setGood(good+1);
+            } else if((actualHero.biography.alignment === "bad") && (evil<3)){
+                setHeroes([...heroes, actualHero])
+                setEvil(evil+1);
             }
         } else {
             console.log("Se ha alcanzado el máximo de 6 integrantes.")
         }
     }
 
-    const deleteHero = (hero) => {
+    const deleteHero = (heroId) => {
         if(heroes.length > 0) {
-            setHeroes(heroes.filter(item => item !== hero));
+            const actualHero = heroes.find(f => f.id === heroId)
+            console.log(actualHero.biography.alignment)
+            if(actualHero.biography.alignment !== ("bad")){
+                setGood(good-1);
+            } else {
+                setEvil(evil-1);
+            }
+            setHeroes(heroes.filter(item => item !== actualHero));
         }
     }
 
     return(
-        <context.Provider value={{ heroes, setHeroes, addHero, deleteHero }}>
+        <context.Provider value={{ heroes, setHeroes, addHero, deleteHero, search, setSearch }}>
             { children }
         </context.Provider>
     )

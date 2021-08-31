@@ -41,7 +41,7 @@ export default function HeroItem(props) {
                             Ver más
                         </Button>
                     </Link>
-                    <Button variant="danger">
+                    <Button onClick={() => props.deleteHero(props.id)} variant="danger">
                         <span className="material-icons xs-18">delete</span>
                     </Button>
                 </div>
