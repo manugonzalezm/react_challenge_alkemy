@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import HeroList from './HeroList';
+import PowerstatsTotal from './PowerstatsTotal'
 import { useHeroesContext } from '../../context/HeroesContext';
 import { Container } from 'react-bootstrap';
 
@@ -10,6 +11,11 @@ export default function HeroListContainer() {
 
     return (
         <Container id="heroListContainer">
+            {heroes.length>0 &&
+                <PowerstatsTotal 
+                heroes={heroes}
+                />
+            }
             < HeroList
                 heroes={heroes}
                 deleteHero={deleteHero}
