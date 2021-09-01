@@ -166,6 +166,63 @@ h1{
     text-align: center;
 }
 
+#login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#loginCard {
+    height: 88vh;
+    width: 30vw;
+    margin: auto;
+    border: black 1px solid;
+}
+
+#loginTitle{
+    text-align: center;
+}
+
+#formContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.inputs_login *{
+    margin: 0 8px;
+}
+
+.validations{
+    width: 20vw;
+    display: flex;
+    margin: 5px;
+    font-size: 0.8rem;
+    padding: 3px;
+    color: white;
+    background-color: rgb(223, 71, 89);
+    border: black 1px solid;
+}
+
+#loginSubmit{
+    margin-left: 18vw;
+}
+
+@media only screen and (max-width: 1110px) {
+    #loginCard {
+        height: 85vh;
+        width: 35vw;
+    }
+    #loginSubmit{
+        margin-left: 20vw;
+    }
+}
+
 @media only screen and (max-width: 992px) {
     .img_hero{
         height: 30vh;
@@ -187,6 +244,30 @@ h1{
     #titlePowerstats{
         font-size: 1.25rem;
     }
+
+    #loginCard {
+        height: 88vh;
+        width: 40vw;
+    }
+
+    #loginSubmit{
+        margin-left: 15vw;
+    }
+
+    .inputs_login input{
+        margin: 3px 0;
+        width: 20vw;
+    }
+
+    .validations{
+        width: 25vw;
+        margin: 5px;
+        padding: 3px;
+    }
+
+    #loginSubmit{
+        margin-left: 22vw;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -201,6 +282,29 @@ h1{
 
     .powerstats_item{
         font-size: 0.9rem;
+    }
+
+    #loginCard {
+        width: 50vw;
+    }
+
+    #loginSubmit{
+        margin-left: 12vw;
+    }
+
+    .inputs_login input{
+        margin: 3px 0;
+        width: 28vw;
+    }
+
+    .validations{
+        width: 35vw;
+        margin: 5px;
+        padding: 3px;
+    }
+
+    #loginSubmit{
+        margin-left: 30vw;
     }
 }
 
@@ -228,6 +332,21 @@ h1{
 
     #emptyTeam{
         font-size: 1.1rem;
+    }
+
+    #loginCard {
+        width: 60vw;
+    }
+
+    .inputs_login input{
+        margin: 3px 0;
+        width: 28vw;
+    }
+
+    .validations{
+        width: 38vw;
+        margin: 5px;
+        padding: 3px;
     }
 }
 
@@ -262,5 +381,32 @@ h1{
     h1{
         font-size: 1.7rem;
         text-align: center;
+    }
+
+    #loginCard {
+        height: 90vh;
+    }
+    
+    #loginText{
+        font-size: 0.8rem;
+    }
+
+    .inputs_login input{
+        margin: 3px 0;
+        width: 45vw;
+    }
+
+    .inputs_login input, .inputs_login label{
+        font-size: 0.9rem;
+    }
+
+    .validations{
+        width: 35vw;
+        margin: 5px;
+        padding: 3px;
+    }
+
+    #loginSubmit{
+        margin-left: 14vw;
     }
 }
