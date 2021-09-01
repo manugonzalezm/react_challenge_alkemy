@@ -8,7 +8,14 @@ export default function SearchList({ search, addHero }) {
     return (
         <Row>
             {search.map((item) => (
-                    <Col key={item.id} lg={4} className="containerCard my-3">
+                    <Col 
+                        key={item.id} 
+                        lg={4}
+                        md={6}
+                        sm={12}
+                        xs={12}
+                        className="containerCard my-3"
+                    >
                         < SearchItem
                             key={item.id}
                             id={item.id}

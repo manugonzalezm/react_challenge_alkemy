@@ -38,7 +38,7 @@
 }
 
 .searchItem{
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
@@ -101,4 +101,35 @@ h1{
 
 .card_search{
     background-color: rgb(182, 182, 182);
+}
+
+@media only screen and (max-width: 992px) {
+    .img_hero{
+        height: 30vh;
+        width: 19vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .img_hero{
+        height: 30vh;
+        width: 25vw;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .img_hero{
+        height: 35vh;
+        width: 45vw;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .img_hero{
+        height: 35vh;
+        width: 60vw;
+    }
+    .card_search{
+        margin: 0 20px;
+    }
 }
