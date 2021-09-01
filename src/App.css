@@ -8,7 +8,6 @@
 .material-icons.xs-25 { font-size: 25px; }
 .material-icons.xs-18 { font-size: 18px; }
 
-
 #rowNavbar{
     width: 100%;
 }
@@ -75,4 +74,23 @@
 
 .large_font{
     font-size: 1.15rem;
+}
+
+#searchBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searcher{
+    width: 80%;
+}
+
+.form_alert{
+    color: red;
+    padding: 8px;
+}
+
+#searchIcon{
+    margin-left: 5px;
 }
