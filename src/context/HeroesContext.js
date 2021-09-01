@@ -29,12 +29,20 @@ const ContextProvider = ( {children} ) => {
             const actualHero = search.find(u => u.id === heroId)
             console.log(actualHero)
             //Tomo a los neutrales como buenos para evitar errores.
-            if((actualHero.biography.alignment !== ("bad")) && (good<3)){
-                setHeroes([...heroes, actualHero])
-                setGood(good+1);
-            } else if((actualHero.biography.alignment === "bad") && (evil<3)){
-                setHeroes([...heroes, actualHero])
-                setEvil(evil+1);
+            if(actualHero.biography.alignment !== ("bad")){
+                if(good===3){
+                    alert("No puedes agregar más héroes buenos")
+                } else if(good<3){
+                    setHeroes([...heroes, actualHero])
+                    setGood(good+1);
+                }
+            } else if(actualHero.biography.alignment === "bad"){
+                if(evil===3){
+                    alert("No puedes agregar más héroes malos")
+                } else if(evil<3){
+                    setHeroes([...heroes, actualHero])
+                    setEvil(evil+1);
+                }
             }
         } else {
             console.log("Se ha alcanzado el máximo de 6 integrantes.")
