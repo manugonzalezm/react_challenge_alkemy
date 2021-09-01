@@ -316,6 +316,12 @@ h1{
     #loginSubmit{
         margin-left: 30vw;
     }
+
+    .material-icons.xs-36 { font-size: 25px; }
+
+    #heroListContainer{
+        margin-top: 100px;
+    }
 }
 
 @media only screen and (max-width: 576px) {
@@ -326,10 +332,6 @@ h1{
 
     .detail_button{
         width: 23vw;
-    }
-    
-    #powerstatsTotal{
-        height: 72vh;
     }
 
     #powerstatsTotal *{
@@ -357,6 +359,15 @@ h1{
         width: 38vw;
         margin: 5px;
         padding: 3px;
+    }
+
+    #brand{
+        height: 2vh;
+        width: 3vw;
+    }
+
+    #powerstatsTotal{
+        height: 85vh;
     }
 }
 
@@ -418,5 +429,32 @@ h1{
 
     #loginSubmit{
         margin-left: 14vw;
+    }
+
+    #homeIcon{
+        margin-top: 14px;
+        margin-bottom: -5px;
+    }
+
+    #navBar{
+        height: 14vh;
+    }
+
+    #searchBox *{
+        height: 50%;
+        font-size: 0.85rem;
+    }
+
+    #searchBox input{
+        width: 80%;
+    }
+
+    #logoutButton{
+        height: 5.5vh;
+        width: 40px;
+    }
+
+    #powerstatsTotal{
+        height: 100vh;
     }
 }

@@ -16,22 +16,23 @@ export default function NavBar() {
                 fixed="top" 
                 bg="dark" 
                 variant="dark"
+                id="navBar"
             >
                 <Container>
                     <Row id="rowNavbar">
-                        <Col xs={4} sm={4} md={6} lg={5} id="homeIcon">
+                        <Col xs={12} md={3} lg={3} id="homeIcon">
                             <Link to='/'>
-                                <Navbar.Brand id="brand">
-                                    <span className="material-icons xs-36">home</span>
+                                <Navbar.Brand>
+                                    <span id="brand" className="material-icons xs-36">home</span>
                                 </Navbar.Brand>
                             </Link>
                         </Col>
-                        <Col xs={8} sm={8} md={6} lg={5}>
+                        <Col xs={10} sm={7} md={7} lg={7}>
                             <SearchHero />
                         </Col>
-                        <Col lg={2}>
-                            <Button variant="danger" bg="danger" onClick={logOut}>
-                            Cerrar Sesión
+                        <Col xs={2} sm={2} md={2} lg={2}>
+                            <Button id="logoutButton" variant="danger" bg="danger" size="sm" onClick={logOut}>
+                                <span className="material-icons">logout</span>
                             </Button>
                         </Col>
                     </Row>
