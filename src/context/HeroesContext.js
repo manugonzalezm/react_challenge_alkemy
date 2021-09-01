@@ -17,8 +17,7 @@ const ContextProvider = ( {children} ) => {
     const [good, setGood] = useState(initialStates[1]);
     const [evil, setEvil] =useState(initialStates[2]);
     const [search, setSearch] = useState([]);
-    const [logged, setLogged] = useState(false);
-    
+
     useEffect(() => {
         localStorage.setItem('heroes', JSON.stringify(heroes))
         localStorage.setItem('good', JSON.stringify(good))
@@ -64,7 +63,7 @@ const ContextProvider = ( {children} ) => {
     }
 
     return(
-        <context.Provider value={{ heroes, setHeroes, addHero, deleteHero, search, setSearch, logged, setLogged }}>
+        <context.Provider value={{ heroes, setHeroes, addHero, deleteHero, search, setSearch }}>
             { children }
         </context.Provider>
     )

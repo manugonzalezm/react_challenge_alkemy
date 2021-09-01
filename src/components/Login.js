@@ -3,10 +3,13 @@ import TextInput from './TextInput'
 import { Card, Button } from 'react-bootstrap'
 import { Formik, Form } from 'formik'
 import * as Yup from 'yup';
+import axios from 'axios';
 
 // Formulario de autenticación. Validado con la librería Formik
 // Authentication form. Validation using Formik(library).
-export default function Login() {
+export default function Login(props) {
+    const URL = "http://challenge-react.alkemy.org/";
+
     return (
         <div id="login">
             <Card id="loginCard">
@@ -32,6 +35,23 @@ export default function Login() {
                         onSubmit={(values, { setSubmitting }) => {
                             setTimeout(() => {
                                 console.log(JSON.stringify(values, null, 2));
+                                axios.post(URL, {
+                                        email: values.email,
+                                        password: values.password
+                                    }, {
+                                        headers: {
+                                            "Content-Type": "application/json",
+                                        },
+                                    })
+                                    .then((response) => {
+                                        console.log(response);
+                                        localStorage.setItem('hero_token', response.data.token);
+                                        props.setLogged(true);
+                                    })
+                                    .catch((error) => {
+                                        console.log(error);
+                                        alert("Los datos ingresados son incorrectos.")
+                                    });
                                 setSubmitting(false);
                             }, 400);
                         }}

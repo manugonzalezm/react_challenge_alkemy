@@ -1,24 +1,35 @@
+import React, { useState, useEffect } from 'react'
 import Login from './components/Login';
 import NavBar from './components/NavBar';
 import HeroListContainer from './components/home_list/HeroListContainer';
 import HeroDetailContainer from './components/detail/HeroDetailContainer';
 import SearchListContainer from './components/search/SearchListContainer';
 import Footer from './components/Footer';
-import { useHeroesContext } from './context/HeroesContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import ContextProvider from './context/HeroesContext';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
-  const { logged } = useHeroesContext();
+  const [logged, setLogged] = useState(false);
+  console.log(logged)
+  const token = localStorage.getItem('hero_token')
 
+  useEffect(() => {
+    if(token !== null){
+      setLogged(true)
+    }
+  }, [])
+  
   return (
     <ContextProvider>
+      <BrowserRouter>
       { !logged ?
-        <Login />
+        <Login 
+          setLogged={setLogged}
+        />
         :
-        <BrowserRouter>
+        <>
           <NavBar />
           <Switch>
             <Route exact path='/' component={ HeroListContainer }/>
@@ -26,8 +37,9 @@ function App() {
             <Route exact path='/search/:name' component={ SearchListContainer }/>
           </Switch>
           <Footer />
-        </BrowserRouter>
+        </>
       }
+      </BrowserRouter>
     </ContextProvider>
   );
 }
