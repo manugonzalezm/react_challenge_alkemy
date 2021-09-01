@@ -2,7 +2,7 @@ import React from 'react'
 import { Card, Col, Row, ProgressBar, Container } from 'react-bootstrap'
 
 //Este componente mostrará las powerstats totales del equipo asi como tambien la altura y peso promedio.
-export default function PowerstatsTotal({ heroes }) {
+export default function PowerstatsTotal({ heroes, good, evil }) {
 
     //Lógica para powerstats, altura y peso promedio del equipo.
     const colors = ["info", "success", "warning", "secondary", "primary", "danger"]
@@ -78,6 +78,15 @@ export default function PowerstatsTotal({ heroes }) {
                                     Alcanzaste el máximo de 6 miembros.
                                 </Col>
                             }
+                            <Col id="counterTitle" lg={12}>
+                                Posiciones ocupadas:
+                            </Col>
+                            <Col className="my-1 count_alignment" xs={6}>
+                                Buenos: {good}/3
+                            </Col>
+                            <Col className="my-1 count_alignment" xs={6}>
+                                Malos: {evil}/3
+                            </Col>
                         </Row>
                     </Col>
                 </Row>

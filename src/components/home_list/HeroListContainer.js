@@ -7,7 +7,8 @@ import { Container } from 'react-bootstrap';
 //Contenedor de la lista de personajes que conforman el equipo. 
 //Aquí ejecuto la petición a la API para obtener la información de los superhéroes.
 export default function HeroListContainer() {
-    const { heroes, deleteHero } = useHeroesContext();
+    const { heroes, deleteHero, good, evil } = useHeroesContext();
+    console.log(`Buenos:${good} y Malos:${evil}`)
 
     return (
         <Container id="heroListContainer">
@@ -15,6 +16,8 @@ export default function HeroListContainer() {
             {heroes.length>0 ?
                 <>
                     <PowerstatsTotal 
+                    good={good}
+                    evil={evil}
                     heroes={heroes}
                     />
                     < HeroList

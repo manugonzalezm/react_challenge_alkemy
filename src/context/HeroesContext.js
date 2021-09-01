@@ -63,7 +63,7 @@ const ContextProvider = ( {children} ) => {
     }
 
     return(
-        <context.Provider value={{ heroes, setHeroes, addHero, deleteHero, search, setSearch }}>
+        <context.Provider value={{ heroes, setHeroes, addHero, deleteHero, search, setSearch, good, evil }}>
             { children }
         </context.Provider>
     )
