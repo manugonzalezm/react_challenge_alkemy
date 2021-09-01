@@ -22,6 +22,7 @@ export default function SearchList({ search, addHero }) {
                             addHero={addHero}
                             name={item.name}
                             image={item.image.url}
+                            alignment={item.biography.alignment}
                         />
                     </Col>
                 ))

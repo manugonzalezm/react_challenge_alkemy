@@ -9,7 +9,7 @@ export default function SearchItem(props) {
         history.push('/');
     }
     return (
-        <Card className="card_search" style={{ width: '19rem' }}>
+        <Card className={`card_search ${props.alignment}`} style={{ width: '19rem' }}>
             <Card.Img className="img_hero" variant="top" src={props.image} />
             <Card.Body className="searchItem">
                 <Card.Title className="m-0"><h3>{props.name}</h3></Card.Title>
