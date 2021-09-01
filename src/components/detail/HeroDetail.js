@@ -8,10 +8,10 @@ export default function HeroDetail(props) {
     return (
         <Card style={{ width: '40rem' }} id="detail">
             <Row>
-                <Col lg={7}>
+                <Col lg={7} md={7} sm={7}>
                     <Card.Title className="m-0 p-3"><h3>{props.name}</h3></Card.Title>
                     <Card.Body>
-                        <Card.Text className="large_font">
+                        <Card.Text id="textDetail">
                             <p>Alias: <span className="bold">{props.alias}</span></p>
                             <p>Lugar de trabajo: <span className="bold">{props.workplace}</span></p>
                             <p>Altura: <span className="bold">{props.height}</span></p>
@@ -21,7 +21,7 @@ export default function HeroDetail(props) {
                         </Card.Text>
                     </Card.Body>
                 </Col>
-                <Col lg={5}>
+                <Col lg={5} md={5} sm={5}>
                     <Card.Img id="imgHeroDetail" variant="top" src={props.image} />
                 </Col>
             </Row>

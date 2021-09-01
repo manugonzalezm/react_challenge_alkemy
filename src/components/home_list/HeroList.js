@@ -9,7 +9,7 @@ export default function HeroList({ heroes, deleteHero }) {
     return (
         <Row>
             {heroes.map((item) => (
-                    <Col lg={4} className="containerCard my-3">
+                    <Col lg={4} md={4} sm={6} className="containerCard my-3">
                         < HeroItem
                             key={item.id}
                             id={item.id}
@@ -17,6 +17,7 @@ export default function HeroList({ heroes, deleteHero }) {
                             image={item.image.url}
                             deleteHero={deleteHero}
                             powerstats={item.powerstats}
+                            alignment={item.biography.alignment}
                         />
                     </Col>
                 ))

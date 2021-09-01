@@ -17,12 +17,12 @@ export default function HeroItem(props) {
     }
 
     return (
-        <Card style={{ width: '20rem' }}>
+        <Card className={`${props.alignment}`} style={{ width: '20rem' }}>
             <Card.Img className="img_hero" variant="top" src={props.image} />
             <Card.Body>
                 <Card.Title className="m-0"><h3>{props.name}</h3></Card.Title>
                 <div>
-                    <Row>
+                    <Row className="powerstats_item">
                         {powerstats.map(item => (
                             <>
                                 <Col className="my-1" lg={5}>
@@ -37,11 +37,11 @@ export default function HeroItem(props) {
                 </div>
                 <div className="containerHero">
                     <Link to={`/detail/${props.id}`}>
-                        <Button variant="info">
+                        <Button variant="info" className="detail_button">
                             Ver más
                         </Button>
                     </Link>
-                    <Button onClick={() => props.deleteHero(props.id)} variant="danger">
+                    <Button onClick={() => props.deleteHero(props.id)} variant="danger" className="delete_button">
                         <span className="material-icons xs-18">delete</span>
                     </Button>
                 </div>

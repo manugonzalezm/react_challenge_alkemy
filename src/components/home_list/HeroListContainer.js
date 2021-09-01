@@ -11,10 +11,15 @@ export default function HeroListContainer() {
 
     return (
         <Container id="heroListContainer">
-            {heroes.length>0 &&
+            <h1>SuperTeam</h1><p id="subtitle"> Armá tu equipo de superhéroes y villanos</p>
+            {heroes.length>0 ?
                 <PowerstatsTotal 
                 heroes={heroes}
                 />
+                :
+                <p id="emptyTeam">
+                    El equipo esta vacío 😢 Usa el buscador del menú para agregar miembros 👆👆
+                </p>
             }
             < HeroList
                 heroes={heroes}

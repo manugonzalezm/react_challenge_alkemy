@@ -41,14 +41,17 @@ export default function PowerstatsTotal({ heroes }) {
     console.log(powerstats)
 
     return (
-        <Card className="p-2 my-3">
+        <Card className="p-2 my-3" id="powerstatsTotal">
             <Container>
                 <Row>
-                    <Col className="my-1" lg={7}>
+                    <Col xs={12}>
+                        <p id="titlePowerstats">Estadísticas promedio del equipo</p>
+                    </Col>
+                    <Col className="my-1" lg={7} md={7} sm={7}>
                         <Row>
                             {powerstats.map(item => (
                                 <>
-                                    <Col className="my-1" lg={12}>
+                                    <Col className="my-0" lg={12}>
                                         {item.name}
                                     </Col>
                                     <Col className="my-1" lg={12}>
@@ -58,7 +61,7 @@ export default function PowerstatsTotal({ heroes }) {
                             ))}
                         </Row>
                     </Col>
-                    <Col className="my-2" lg={5}>
+                    <Col className="my-2" lg={5} md={5} sm={5}>
                         <Row>
                             <Col className="my-1 large_font" lg={12}>
                                 Altura Promedio: <span className="bold">{parseInt(totalHeight/heroes.length)} cm</span>
