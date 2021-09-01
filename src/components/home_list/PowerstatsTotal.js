@@ -81,10 +81,10 @@ export default function PowerstatsTotal({ heroes, good, evil }) {
                             <Col id="counterTitle" lg={12}>
                                 Posiciones ocupadas:
                             </Col>
-                            <Col className="my-1 count_alignment" xs={6}>
+                            <Col className="my-1 count_alignment bg-success" xs={6}>
                                 Buenos: {good}/3
                             </Col>
-                            <Col className="my-1 count_alignment" xs={6}>
+                            <Col className="my-1 count_alignment bg-danger" xs={6}>
                                 Malos: {evil}/3
                             </Col>
                         </Row>

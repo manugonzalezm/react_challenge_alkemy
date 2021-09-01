@@ -33,6 +33,7 @@ export default function SearchListContainer() {
 
     return (
         <div id="heroListContainer">
+            <h5 id="titleSearchContainer">Sumá nuevos miembros</h5>
             {
                 search !== "error" ?
                 < SearchList

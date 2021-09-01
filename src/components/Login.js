@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TextInput from './TextInput'
 import { Card, Button } from 'react-bootstrap'
 import { Formik, Form } from 'formik'
@@ -9,6 +9,8 @@ import axios from 'axios';
 // Authentication form. Validation using Formik(library).
 export default function Login(props) {
     const URL = "http://challenge-react.alkemy.org/";
+    const [isLoading, setLoading] = useState(false);
+    const handleClickLoad = () => setLoading(true);
 
     return (
         <div id="login">
@@ -34,6 +36,7 @@ export default function Login(props) {
                         })}
                         onSubmit={(values, { setSubmitting }) => {
                             setTimeout(() => {
+                                handleClickLoad();
                                 console.log(JSON.stringify(values, null, 2));
                                 axios.post(URL, {
                                         email: values.email,
@@ -73,7 +76,15 @@ export default function Login(props) {
                                     placeholder="react"
                                 />
                             </div>
-                            <Button id="loginSubmit" variant="primary" bg="primary" type="submit">Ingresar</Button>
+                            <Button 
+                                id="loginSubmit" 
+                                variant="primary" 
+                                bg="primary" 
+                                type="submit"
+                                disabled={isLoading}
+                            >
+                                {isLoading ? 'Loading…' : 'Ingresar'}
+                            </Button>
                         </Form>
                     </Formik>
                 </Card.Body>
