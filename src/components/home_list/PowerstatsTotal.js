@@ -67,8 +67,8 @@ export default function PowerstatsTotal({ heroes }) {
                                 Peso Promedio: <span className="bold">{parseInt(totalWeight/heroes.length)} kg</span>
                             </Col>
                             { heroes.length<6 ?
-                                <Col className="my-4" lg={12} id="textHelper">
-                                    Todavía podés elegir {6-heroes.length} superhéroes más.
+                                <Col className="my-4" lg={12} id="textHelper"> {/* Operador condicional para manejar el singular y el plural de los superheroes restantes */}
+                                    Todavía podés elegir {6-heroes.length} superhéroe{heroes.length !== 5 && <span>s</span>} más.
                                 </Col>
                                 :
                                 <Col className="my-1" lg={12} id="textHelper">
