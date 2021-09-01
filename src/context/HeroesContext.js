@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom'
 
 export const context = createContext([]);
 export const useHeroesContext = () => useContext(context);
@@ -8,6 +9,7 @@ const goodFromLS = JSON.parse(localStorage.getItem('good'))
 const evilFromLS = JSON.parse(localStorage.getItem('evil'))
 
 const ContextProvider = ( {children} ) => {
+    let history = useHistory();
     const initialStates = [
         heroesFromLS !== ([] || null) ? heroesFromLS : [],
         goodFromLS > (0 || null) ? goodFromLS : 0,
@@ -44,8 +46,9 @@ const ContextProvider = ( {children} ) => {
                     setEvil(evil+1);
                 }
             }
+            history.push('/')
         } else {
-            console.log("Se ha alcanzado el máximo de 6 integrantes.")
+            alert("No se puede realizar la acción. Se ha alcanzado el máximo de 6 integrantes.")
         }
     }
 
