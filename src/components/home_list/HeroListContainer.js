@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import HeroList from './HeroList';
 import PowerstatsTotal from './PowerstatsTotal'
 import { useHeroesContext } from '../../context/HeroesContext';
@@ -28,6 +28,8 @@ export default function HeroListContainer() {
                 :
                 <p id="emptyTeam">
                     El equipo esta vacío 😢 Usa el buscador del menú para agregar miembros 👆👆
+                    <br/>
+                    El límite es de 6 (3 buenos y 3 malos)
                 </p>
             }
         </Container>

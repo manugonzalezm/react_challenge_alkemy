@@ -1,10 +1,9 @@
 import React from 'react'
 import SearchHero from './SearchHero';
 import { Row, Col, Container, Navbar, Button } from 'react-bootstrap'
-import { Link, useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function NavBar() {
-    let history= useHistory();
     const logOut = () => {
         localStorage.removeItem('hero_token');
         window.location.reload();

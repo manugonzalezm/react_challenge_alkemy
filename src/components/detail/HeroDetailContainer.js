@@ -2,7 +2,7 @@ import React from 'react';
 import HeroDetail from './HeroDetail';
 import { useHeroesContext } from '../../context/HeroesContext'
 import { useParams } from 'react-router-dom'
-import { Container } from 'react-bootstrap'
+import { Container, Button } from 'react-bootstrap'
 
 // Contenedor del detalle de superhéroe.
 /* Aquí ejecutamos la petición a la API obteniendo la información que se utilizará
@@ -14,7 +14,8 @@ export default function HeroDetailContainer() {
     console.log(idHero.idHero)
     console.log(hero)
     return (
-        <Container className="my-5" id="detailContainer">
+        <>
+        <Container className="my-3" id="detailContainer">
             < HeroDetail
                 name={hero.name}
                 image={hero.image.url}
@@ -26,5 +27,14 @@ export default function HeroDetailContainer() {
                 workplace={hero.work.base}
             />
         </Container>
+        <div id="buttonHome">
+            <Button
+                variant="primary"
+                bg="primary"
+            >
+                Volver al home
+            </Button>
+        </div>
+        </>
     )
 }

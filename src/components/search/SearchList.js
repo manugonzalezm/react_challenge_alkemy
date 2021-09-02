@@ -9,7 +9,7 @@ export default function SearchList({ search, addHero }) {
         <Row>
             {search.map((item) => (
                     <Col 
-                        key={item.id} 
+                        key={item.id+1} 
                         lg={4}
                         md={6}
                         sm={12}
@@ -17,7 +17,6 @@ export default function SearchList({ search, addHero }) {
                         className="containerCard my-3"
                     >
                         < SearchItem
-                            key={item.id}
                             id={item.id}
                             addHero={addHero}
                             name={item.name}

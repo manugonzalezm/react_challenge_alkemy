@@ -4,6 +4,14 @@
     align-items: center;
 }
 
+.detail_fields{
+    display: block; 
+    margin-top: 1em; 
+    margin-bottom: 1em; 
+    margin-left: 0; 
+    margin-right: 0;
+}
+
 .material-icons.xs-36 { font-size: 36px; }
 .material-icons.xs-25 { font-size: 25px; }
 .material-icons.xs-18 { font-size: 18px; }
@@ -80,6 +88,15 @@
 #imgHeroDetail{
     width: 100%;
     height: 100%;
+}
+
+#buttonHome{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin: -20px 0 40px 0;
 }
 
 .bold{
@@ -405,7 +422,7 @@ h1{
         height: 85vh;
     }
 
-    #textDetail p{
+    #textDetail *{
         font-size: 0.9rem;
     }
 }

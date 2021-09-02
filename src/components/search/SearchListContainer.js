@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import SearchList from './SearchList';
 import {useHeroesContext} from '../../context/HeroesContext';
 import { useParams, useHistory } from 'react-router-dom'
@@ -29,7 +29,7 @@ export default function SearchListContainer() {
                 console.log(error);
                 history.push('/');
             });
-    }, [name])
+    }, [name, history, setSearch])
 
     return (
         <div id="heroListContainer">

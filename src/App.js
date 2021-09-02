@@ -19,7 +19,7 @@ function App() {
     if(token !== null){
       setLogged(true)
     }
-  }, [])
+  }, [token])
   
   return (
     <ContextProvider>

@@ -9,9 +9,8 @@ export default function HeroList({ heroes, deleteHero }) {
     return (
         <Row>
             {heroes.map((item) => (
-                    <Col lg={4} md={4} sm={6} className="containerCard my-3">
+                    <Col key={item.id} lg={4} md={4} sm={6} className="containerCard my-3">
                         < HeroItem
-                            key={item.id}
                             id={item.id}
                             name={item.name}
                             image={item.image.url}

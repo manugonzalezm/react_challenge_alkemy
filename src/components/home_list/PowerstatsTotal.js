@@ -60,14 +60,14 @@ export default function PowerstatsTotal({ heroes, good, evil }) {
                     <Col className="my-1" lg={7} md={7} sm={7}>
                         <Row>
                             {powerstats.map(item => (
-                                <>
+                                <div key={`${item.id}${item.name}`}>
                                     <Col className="my-0" lg={12}>
                                         {item.name}
                                     </Col>
                                     <Col className="my-1" lg={12}>
                                         <ProgressBar variant={item.color} now={item.value} />
                                     </Col>
-                                </>
+                                </div>
                             ))}
                         </Row>
                     </Col>
