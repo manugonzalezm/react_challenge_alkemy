@@ -1,4 +1,4 @@
-# Superhero Team - Alkemy Challenge - React JS
+# Superhero Team 🦸‍♂️🦸‍♀ Alkemy Challenge - React JS
 
   Este proyecto es un challenge para Alkemy Labs. En él se desarrolla una aplicación para crear un equipo de superhéroes consumiendo una API externa (Superhero API) y mostrando diferentes atributos a nivel individual y del equipo consolidado.
   Para ingresar al sitio deberemos autenticarnos. Esto se hace ingresando el email y contraseña que figuran en los placeholders del formulario de Login. Una vez que hacemos el submit se realiza una petición POST a una url provista por Alkemy, obteniendo como respuesta un token si los campos son correctos (de lo contrario se acciona una alerta). Este token se almacena en el localStorage y permitirá acceder a las distintas rutas del sitio, de lo contrario siempre se redirige al formulario de Login.
