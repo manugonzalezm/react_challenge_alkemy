@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# Superhero Team 🦸‍♂️🦸‍♀ Alkemy Challenge - React JS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  Este proyecto es un challenge para Alkemy Labs. En él se desarrolla una aplicación para crear un equipo de superhéroes consumiendo una API externa (Superhero API) y mostrando diferentes atributos a nivel individual y del equipo consolidado.
+  Para ingresar al sitio deberemos autenticarnos. Esto se hace ingresando el email y contraseña que figuran en los placeholders del formulario de Login. Una vez que hacemos el submit se realiza una petición POST a una url provista por Alkemy, obteniendo como respuesta un token si los campos son correctos (de lo contrario se acciona una alerta). Este token se almacena en el localStorage y permitirá acceder a las distintas rutas del sitio, de lo contrario siempre se redirige al formulario de Login.
 
-## Available Scripts
+## Librerías y recursos utilizados: 📚📚
+  - Axios (peticiones HTTP)
+  - Formik y Yup (validaciones de formularios)
+  - React-Bootstrap (estilos y grid responsive)
+  - React router (para navegación)
 
-In the project directory, you can run:
+## ¿Qué podemos encontrar? 🌟🔍
+  - Validaciones de campos con mensajes personalizados.
+  - Redirecciones al validar y hacer submit en los forms.
+  - Colores distintivos (verde y rojo) identificando orientación buena o mala del superhéroe.
+  - Límites a la cantidad de superhéroes buenos y malos que se pueden agregar (3 y 3 respectivamente).
+  - Powerstats, peso y altura promedio del equipo. Las powerstats siempre están ordenadas de mayor a menor identificando las virtudes del equipo.
+  - Diseño responsive con bootstrap grid y media queries.
+  - Animaciones al renderizar los componentes.
+  - Contador de superhéroes restantes y subcontador de buenos y malos en total.
+  - Botón de Logout para limpiar el token del localStorage.
+  - Prevención de crasheo cuando no se encuentran resultados en la búsqueda de un nuevo héroe. Se muestra un mensaje.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Desarrollado por Manuel Gonzalez Mouriño 👨‍💻
