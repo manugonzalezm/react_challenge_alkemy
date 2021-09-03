@@ -9,7 +9,7 @@ const evilFromLS = JSON.parse(localStorage.getItem('evil'))
 
 const ContextProvider = ( {children} ) => {
     const initialStates = [
-        heroesFromLS !== ([] || null) ? heroesFromLS : [],
+        heroesFromLS !== null ? heroesFromLS : [],
         goodFromLS > (0 || null) ? goodFromLS : 0,
         evilFromLS > (0 || null) ? evilFromLS : 0,
     ]
