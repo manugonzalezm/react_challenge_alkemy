@@ -17,21 +17,24 @@ export default function HeroItem(props) {
     }
 
     return (
-        <Card className={`${props.alignment}`} style={{ width: '20rem' }}>
+        <Card 
+            className={`${props.alignment}`} 
+            style={{ width: '20rem' }}
+        >
             <Card.Img className="img_hero" variant="top" src={props.image} />
             <Card.Body>
                 <Card.Title className="m-0"><h3>{props.name}</h3></Card.Title>
                 <div>
                     <Row className="powerstats_item">
                         {powerstats.map(item => (
-                            <>
-                                <Col className="my-1" lg={5}>
+                            <div key={item.name+item.id}>
+                                <Col className="my-1" lg={11}>
                                     {item.name}
                                 </Col>
-                                <Col className="my-1" lg={7}>
+                                <Col className="my-1" lg={11}>
                                     <ProgressBar variant={item.color} now={item.value} />
                                 </Col>
-                            </>
+                            </div>
                         ))}
                     </Row>
                 </div>

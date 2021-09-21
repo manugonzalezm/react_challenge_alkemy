@@ -57,7 +57,7 @@ export default function PowerstatsTotal({ heroes, good, evil }) {
                     <Col xs={12}>
                         <p id="titlePowerstats">Estadísticas promedio del equipo</p>
                     </Col>
-                    <Col className="my-1" lg={7} md={7} sm={7}>
+                    <Col className="m-2" lg={6} md={6} sm={6}>
                         <Row>
                             {powerstats.map(item => (
                                 <div key={`${item.id}${item.name}`}>
