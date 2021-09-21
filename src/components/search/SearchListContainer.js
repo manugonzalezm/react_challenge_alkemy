@@ -3,6 +3,7 @@ import SearchList from './SearchList';
 import {useHeroesContext} from '../../context/HeroesContext';
 import { useParams, useHistory } from 'react-router-dom'
 import Axios from 'axios';
+import https from 'https';
 
 /* Contenedor de la lista de superhéroes buscados.
 Aquí ejecutamos la petición a la API para obtener una breve descripción de 
@@ -13,10 +14,8 @@ export default function SearchListContainer() {
     let history = useHistory();
 
     useEffect(()=> {
-        Axios({
-            method: "get",
-            url: `https://www.superheroapi.com/api.php/10219509750322612/search/${name}`,
-        })
+        const httpsAgent = new https.Agent({ keepAlive: true });
+        Axios.get(`https://www.superheroapi.com/api.php/10219509750322612/search/${name}`, { httpsAgent })
             .then((response) => {
                 if(response.data.response==="success"){
                     setSearch(response.data.results)
