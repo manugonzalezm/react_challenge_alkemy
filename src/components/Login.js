@@ -38,7 +38,7 @@ export default function Login(props) {
                             setTimeout(() => {
                                 handleClickLoad();
                                 console.log(JSON.stringify(values, null, 2));
-                                axios.post(URL, {
+                                /* axios.post(URL, {
                                         email: values.email,
                                         password: values.password
                                     }, {
@@ -54,7 +54,15 @@ export default function Login(props) {
                                     .catch((error) => {
                                         console.log(error);
                                         alert("Los datos ingresados son incorrectos.")
-                                    });
+                                    }); */ 
+
+                                    //Código comentado por que Firebase no permite peticiones a URLs no seguras
+                                    if(values.email==="challenge@alkemy.org" & values.password==="react"){
+                                        localStorage.setItem('hero_token', "token");
+                                        props.setLogged(true);
+                                    } else {
+                                        alert("Los datos ingresados son incorrectos.")
+                                    }
                                 setSubmitting(false);
                             }, 400);
                         }}
